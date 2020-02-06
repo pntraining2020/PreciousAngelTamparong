@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('time', 'timeController@index')->name('time');
+Route::get('createTime', 'timeController@createTime')->name('createTime');
+Route::get('insert', 'timeController@insert')->name('insert');
+Route::post('insert_time', 'timeController@insert')->name('insert');
+Route::get('timeEnd', 'timeController@TimeDisplay');
+Route::post('insert_timeEnd', 'timeController@TimeDisplay');
+
+
+
+
